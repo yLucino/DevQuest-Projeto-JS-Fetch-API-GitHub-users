@@ -1,5 +1,6 @@
 import { getUser } from './services/user.js'
 import { getRepositories } from './services/repositories.js'
+import { getEvents } from './services/events.js';
 import { user } from './objects/user.js';
 import { screen } from './objects/screen.js';
 
@@ -24,10 +25,12 @@ async function getUserData(userName) {
   const userResponse = await getUser(userName)
   if(validateUserExistenceEmpty(userResponse) === true) return
   const repositoriesResponse = await getRepositories(userName)
+  const eventsResponse = await getEvents(userName)
 
   user.setInfo(userResponse)
   user.setRepositories(repositoriesResponse)
-
+  user.setEvent(eventsResponse)
+  
   screen.renderUser(user)
 }
 

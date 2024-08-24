@@ -31,7 +31,7 @@ main {
 }
 
 .section{
-  padding: 70px 0;
+  padding-top: 70px;
 }
 
 .container {
@@ -148,9 +148,40 @@ main {
   color: #fff
 }
 
+.container .profile-data .repositories ul li a span {
+  background-color:hotpink;
+  padding: 1px 3px 2px 3px;
+  border-radius: 5px;
+  color: black;
+  transition: .3s ease-in-out;
+}
+
+.container .profile-data .repositories ul li a:hover span {
+  background-color: #fff;
+}
+
 .container .profile-data.hide{
   display: none;
 }
+
+/* EVENTS */
+
+.container .profile-data .events h2 {
+  margin-bottom: 30px;
+}
+
+.container .profile-data .events ul li {
+  color: #a1a1a1;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.container .profile-data .events ul li span {
+  font-weight: bold;  
+  color: black;
+  margin-right: 15px;
+  text-transform: none;
+} 
 
 @media (max-width: 1280px) {
   .container {
